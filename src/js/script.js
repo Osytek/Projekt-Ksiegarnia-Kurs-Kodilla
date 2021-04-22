@@ -49,7 +49,7 @@
 
 
     initActions(){
-    
+      const thisActions = this;
       this.bookList.addEventListener('dblclick', function(event){
           
         if(!event.target.offsetParent.classList.contains('favorite')){ 
@@ -78,7 +78,7 @@
             filters.splice(filters.indexOf(event.target.value));
           }
               
-          this.filterBooks();
+          thisActions.filterBooks();
         });
           
       }
@@ -142,4 +142,5 @@
     }
   }
   const app = new BooksList(); 
+  app;
 }
